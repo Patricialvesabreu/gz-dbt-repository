@@ -1,12 +1,13 @@
-VERSION: 2
+version: 2
 
-SOURCES:
-  - NAME: RAW
-    SCHEMA: RAW
-    TABLES:
-    - NAME: SALES
-      IDENTIFIER: SALES
-    - NAME: PRODUCT
-      IDENTIFIER: PRODUCT
-    - NAME: SHIP
-      IDENTIFIER: SHIP
+sources:
+  - name: raw
+    schema: RAW
+    tables:
+    - name: sales
+      identifier: SALES
+    - name: product
+      identifier: PRODUCT
+    - name: ship
+      identifier: SHIP
+  
