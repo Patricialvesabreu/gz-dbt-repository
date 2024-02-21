@@ -5,6 +5,14 @@ sources:
     schema: RAW
     description: Greenweez data source
     tables:
+    - name: adwords
+      identifier: adwords
+    - name: bing
+      identifier: bing
+    - name: criteo
+      identifier: criteo
+    - name: facebook
+      identifier: facebook
     - name: sales
       identifier: SALES
       description: sales of greenweez
