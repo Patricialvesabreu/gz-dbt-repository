@@ -1,5 +1,5 @@
-select
-    orders_id,
+SELECT
+  orders_id,
   max(date_date) as date_date,
   ROUND(SUM(revenue),2) as revenue,
   ROUND(SUM(quantity),2) as quantity,
