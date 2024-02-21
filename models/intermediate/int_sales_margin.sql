@@ -4,7 +4,6 @@ select
     orders_id,
     revenue, 
     quantity, 
-    CAST(purchase_price AS FLOAT64), 
     ROUND(quantity*CAST(purchase_price AS FLOAT64),2) AS purchase_cost,
     revenue - ROUND(quantity*CAST(purchase_price AS FLOAT64),2) AS margin
 from {{ ref("stg_raw__sales") }}
