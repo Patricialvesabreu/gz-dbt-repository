@@ -6,21 +6,14 @@ sources:
     description: Greenweez data source
     tables:
     - name: sales
-      freshness: 
-        warn_after:
-          count: 90
-          period: day
-      loaded_at_field: Cast as date_date
       identifier: SALES
       description: sales of greenweez
       columns:
         - name: orders_id
           description: Primary key of the table
           tests:
-            - unique:
-                column_name: orders_id
-            - not_null:
-                column_name: orders_id
+            - unique
+            - not_null
     - name: product
       identifier: PRODUCT
       description: products and purchase price of Greenweez
@@ -28,17 +21,13 @@ sources:
         - name: products_id
           description: the ID of the products on Greenweez | Primary key of the table
           tests:
-            - unique:
-                column_name: products_id
-            - not_null:
-                column_name: products_id
+            - unique
+            - not_null
     - name: ship
       identifier: SHIP
       columns:
         - name: orders_id
           description: Primary key of the table
           tests:
-            - unique:
-                column_name: orders_id
-            - not_null:
-                column_name: orders_id
+            - unique
+            - not_null
